@@ -1,4 +1,4 @@
-### 1、fs.readFile
+## 1、fs.readFile
 
 fs.readFile() 是异步函数用于读取文件。
     如果在读取文件过程中发生错误，错误 err 对象就会输出错误信息。
@@ -7,7 +7,7 @@ fs.readFile() 是异步函数用于读取文件。
 
 
 
-### 2、EventEmitter 类
+## 2、EventEmitter 类
 
 引入 events 模块
 
@@ -28,3 +28,15 @@ var eventEmitter = new events.EventEmitter();
 Node.js 所有的异步 I/O 操作在完成时都会发送一个事件到事件队列。
 
 ==on 函数用于绑定事件函数，emit 属性用于触发一个事件==。
+
+
+
+## 3、Node.js模块系统
+
+Node.js 提供了 exports 和 require 两个对象，
+
+```
+其中 exports 是模块公开的接口，
+require 用于从外部获取一个模块的接口，即所获取模块的 exports 对象。 
+```
+
