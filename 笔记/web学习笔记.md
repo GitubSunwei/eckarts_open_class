@@ -482,12 +482,103 @@ Math.pow(3, 2) === 3 ** 2    // 9
 >
 >   > 如果仅仅查找数据是否在数组中，建议使用includes，如果是查找数据的索引位置，建议使用indexOf更好一些
 
- 
+#  
+
+# 网络协议http和https
+
+ **http和https**
+
+ http协议和baihttps协议的区别：传输信息安全性不同、连接方式不同、端口不同、证书申请方式不同 
+
+**1、传输信息安全性不同**
+
+1.0 http协议：是超文本传输协议，信息是明文传输。如果攻击者截取了Web浏览器和网站服务器之间的传输报文，就可以读懂其中的信息。
+
+2.0 https协议：是具有安全性的 ssl 加密传输协议，为浏览器和服务器之间通信加密，确保数据传输的安全。
+
+**2、连接方式不同**
+
+1.0 http协议：http的连接很简单，是无状态的。
+
+2.0 https协议：是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议。
+
+**3、端口不同**
+
+1.0 http协议：使用的端口是80
+
+2.0 https协议：使用的端口是443
+
+**4、证书申请方式不同**
+
+1.0  证书申请方式不同
+
+2.0 https协议：需要到ca申请证书，一般免费证书很少，需要交费。
 
  
 
- 
+#  前后台ajax请求库：axios
 
- 
+## axios的使用
 
- 
+```
+1）安装 npm install axios 
+
+2）引用 <script src="axios.min.js"></script>  
+
+document.querySelector('.get').onclick = function() {
+                axios.get('...url').then(
+                    function(response) {
+                        console.log(response)
+                      // console.log(ret.data) data是固定写法
+                    },
+                    function(err) {
+                        console.log(err)
+                    }
+                )
+
+            }
+
+```
+
+##  特征
+
+- 在浏览器中创建XMLHttpRequest
+- 支持Promise API
+- 提供并发请求接口`axios.all([ ])`
+- node.js创建http请求
+- 客户端支持防止CSRF（每个请求都带cookie中的key）
+- 请求/响应拦截器
+- 自动转换json数据
+
+## **请求拦截器** 
+
+```
+axios.interceptors.request.use(function(req){
+	...// 对请求信息处理
+	return req
+
+},function(err){
+	console.log(err)
+})
+
+```
+
+## **响应拦截器** 
+
+```
+axios.interceptors.response.use(function(res) {
+            console.log(res)
+			// 对获取的数据进行处理
+            return res
+        }, function(err) {
+            console.log(err)
+        })
+
+```
+
+
+
+
+
+
+
