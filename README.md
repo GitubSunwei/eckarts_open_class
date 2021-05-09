@@ -1,4 +1,4 @@
-git总是报错，加载不进去，烦人啊
+git总是报错
 
 .DS_Store
 node_modules
