@@ -1,4 +1,4 @@
-git总是报错
+git总是报错，
 
 .DS_Store
 node_modules
